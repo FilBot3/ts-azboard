@@ -1,0 +1,18 @@
+---
+# https://taskfile.dev
+version: '3'
+
+dotenv:
+  - "{{.HOME}}/.local/azdo-pat.env"
+
+tasks:
+  default:
+    desc: Transpile TypeScript to JavaScript with tsc
+    cmds:
+      - npm run tsc
+
+  run:
+    desc: Run the application with NodeJS
+    cmds:
+      - node dist/index.js
+...
